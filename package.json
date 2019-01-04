@@ -1,0 +1,48 @@
+{
+  "name": "electron-ts-react",
+  "version": "1.0.0",
+  "description": "Electron started project",
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "build": "tsc -p ./; cp ./src/renderer/index.html ./dist/main/index.html",
+    "start": "electron ./dist/main/main.js",
+    "watch": "tsc -p ./ -w",
+    "dist": "tsc -p ./; cp ./src/renderer/index.html ./dist/main/index.html;electron-packager ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Yeung Yiu Hung",
+  "license": "MIT",
+  "devDependencies": {
+    
+    "@types/node-fetch": "^2.1.4",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.4",
+    "electron-packager": "^13.0.1",
+    "electron-rebuild": "^1.8.2",
+    "electron-reload": "^1.4.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.15.2",
+    "tslint": "^5.12.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "build": {
+    "appId": "com.darkcl.jira-desktop-client",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}
